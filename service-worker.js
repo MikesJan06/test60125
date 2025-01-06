@@ -4,12 +4,12 @@ const ASSETS = [
   "./index.html",
   "./app.js",
   "./manifest.json",
-  "./style.css", // Pokud máte externí CSS
+  "./style.css", 
   "./icons/icon-192x192.png",
   "./icons/icon-512x512.png"
 ];
 
-// Instalace Service Workeru a uložení assetů do cache
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -19,7 +19,7 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// Aktivace a odstranění starých cache
+
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -35,7 +35,7 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// Interceptování požadavků a obsluha cache
+
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => {

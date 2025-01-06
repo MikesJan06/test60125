@@ -12,7 +12,7 @@
     <h1>Tvůrce Příběhů</h1>
   </header>
   <main>
-    <!-- Hlavní stránka -->
+    
     <section id="index" class="hidden">
       <h2>Váš Příběh</h2>
       <article>
@@ -26,7 +26,7 @@
       <button onclick="showSetup()">Upravit Příběh</button>
     </section>
 
-    <!-- Nastavovací stránka -->
+    
     <section id="setup">
       <h2>Vytvořte svůj Příběh</h2>
       <label for="zacatek">Začátek</label>
@@ -42,7 +42,7 @@
     </section>
   </main>
   <script>
-    // Načítání uložených dat při spuštění
+   
     document.addEventListener("DOMContentLoaded", () => {
       const zacatek = localStorage.getItem("zacatek") || "";
       const zvrat = localStorage.getItem("zvrat") || "";
